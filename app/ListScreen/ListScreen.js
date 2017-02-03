@@ -10,10 +10,10 @@ angular.module('myApp.ListScreen', ['ngRoute'])
   });
 }])
 
-.controller('ListScreenCtrl', [function($scope, $http) {
-  $http.get("https://private-anon-3719e9afa5-blissrecruitmentapi.apiary-mock.com/questions?10&10")
-  .then(function (response){
-    this.questions = response.data;
-  });
+.controller('ListScreenCtrl', function($http) {
+  $http.get("https://private-anon-0540f979da-blissrecruitmentapi.apiary-mock.com/questions?5&5")
+ .then(function (response) { apiQuestions = response.data; });
+ this.questions = apiQuestions;
+});
 
-}]);
+var apiQuestions = [];

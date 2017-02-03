@@ -1,7 +1,19 @@
-<!-- Show object details-->
 
-<div ng-controller="ListScreenCtrl as list">
-  <h1>TESTING</h1>
-  <h1> {{ list.questions }} </h1>
 
+<header>List Questions</header>
+
+<input type="text" class="searchBox" placeholder="Search...">
+
+<div ng-controller="ListScreenCtrl as list" class="questionList">
+  <ol>
+    <li class="question" ng-repeat="question in list.questions">
+      <figure>
+        <img src={{question.thumb_url}}>
+      </figure>
+      <h3>{{question.question}}</h3>
+      <time>{{question.published_at}}</time>
+      <ol>
+        <li ng-repeat="choice in question.choices">{{choice.choice}} Votes: {{choice.votes}}</li>
+      </ol>
+  </li>
 </div>

@@ -1,0 +1,19 @@
+
+
+<header>Questions Details</header>
+
+<div ng-controller="DetailScreenCtrl as detail" class="questionDetail">
+  <figure>
+    <img src={{detail.question.image_url}}>
+  </figure>
+  <h3>{{detail.question.question}}</h3>
+  <time>{{detail.question.published_at}}</time>
+  <ol>
+    <li ng-repeat="choice in detail.question.choices"> {{choice.choice}} Votes: {{choice.votes}}
+      <button type="button" class="voteButton" ng-click="voteChoice()">Vote</button>
+    </li>
+  </ol>
+  <button type="button" class="shareButton" ng-click="shareQuestion()">Share</button>
+  <input type="text" ng-model="emailInput" ng-show="shareQuestionFlag" placeholder="Email of your friend :)" ng-keyup="$event.keyCode == 13 ? sendEmail() : null">
+  <h5>{{message}}</h5>
+</div>

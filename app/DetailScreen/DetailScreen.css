@@ -1,0 +1,29 @@
+
+
+.questionDetail {
+  font-family: 'Open Sans', sans-serif;
+  margin: 20px;
+}
+
+.questionDetail h3 {
+  font-size: 30px;
+}
+
+.voteButton, .shareButton {
+  border: none;
+  border-radius: 10px;
+  background-color: #0CCAF1;
+  font-size: 25px;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  padding: 20px;
+}
+
+.shareButton {
+  background-color: #1646CC;
+  margin-left: 10px;
+}
+
+.voteButton:hover, .shareButton:hover {
+  background-color: black;
+}

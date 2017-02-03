@@ -1,0 +1,56 @@
+/* COLORS
+#0CCAF1 highlight color
+#07738F
+#04475B
+#011E28 darker color
+*/
+
+
+header {
+  font-size: 50px;
+  font-family: 'Oswald', sans-serif;
+  color: #00578E;
+  text-align: center;
+}
+
+
+figure {
+  float: left;
+}
+
+
+.searchBox {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  border: none;
+  border-bottom: 2px solid #0CCAF1;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  font-size: 25px;
+  text-align: center
+}
+.searchBox:hover {
+  width: 40%;
+}
+
+.questionList {
+  position: relative;
+}
+
+.question {
+  background-color: #07738F;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  left: 10px;
+  right: 10px;
+  padding: 5px;
+  margin: 10px;
+}
+
+
+.question:hover {
+  background-color: #0CCAF1;
+}
