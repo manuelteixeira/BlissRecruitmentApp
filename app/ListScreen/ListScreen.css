@@ -18,6 +18,10 @@ figure {
   float: left;
 }
 
+a:hover, a:link, a:visited, a:active {
+  text-decoration: none;
+}
+
 
 .searchBox {
   display: block;

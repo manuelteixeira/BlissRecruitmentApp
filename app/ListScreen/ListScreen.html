@@ -7,13 +7,16 @@
 <div ng-controller="ListScreenCtrl as list" class="questionList">
   <ol>
     <li class="question" ng-repeat="question in list.questions">
-      <figure>
-        <img src={{question.thumb_url}}>
-      </figure>
-      <h3>{{question.question}}</h3>
-      <time>{{question.published_at}}</time>
-      <ol>
-        <li ng-repeat="choice in question.choices">{{choice.choice}} Votes: {{choice.votes}}</li>
-      </ol>
-  </li>
+      <a ng-href="/#!/DetailScreen/{{question.id}}">
+        <figure>
+          <img src={{question.thumb_url}}>
+        </figure>
+        <h3>{{question.question}}</h3>
+        <time>{{question.published_at}}</time>
+        <ol>
+          <li ng-repeat="choice in question.choices">{{choice.choice}} Votes: {{choice.votes}}</li>
+        </ol>
+      </a>
+    </li>
+  </ol>
 </div>
