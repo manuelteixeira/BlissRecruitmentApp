@@ -1,24 +1,37 @@
 
 
-<header>Questions Details</header>
-
-<div ng-controller="DetailScreenCtrl as detail" class="questionDetail">
-  <figure>
-    <img src={{detail.question.image_url}}>
-  </figure>
-  <h3>{{detail.question.question}}</h3>
-  <time>{{detail.question.published_at}}</time>
-  <ol>
-    <li ng-repeat="choice in detail.question.choices"> {{choice.choice}} Votes: {{choice.votes}}
-      <button type="button" class="voteButton" ng-click="voteChoice()">Vote</button>
-    </li>
-  </ol
-  <form ng-submit="sendEmail()" name="form">
-    <input type="submit" value="Share" class="shareButton" ng-mouseover="shareQuestionFlag = true"/>
-    <input type="email" required name="email" ng-model="emailInput" ng-show="shareQuestionFlag" placeholder="Email of your friend :)"/>
-    <span ng-show="form.email.$dirty">
-      Email is required
-    </span>
-  </form>
-  <h5>{{message}}</h5>
-</div>
+<div class="container-fluid" ng-controller="DetailScreenCtrl" ng-init="getApiQuestion()">
+  <header>Questions Details</header
+    <div class="row-fluid">
+      <div class="col-md-6">
+        <img class="image" src="{{question.image_url}}">
+      </div>
+      <div class="col-md-6">
+        <h3>{{question.question}}</h3>
+        <time>{{question.published_at}}</time>
+        <ol ng-repeat="choice in question.choices" class="questionDetail">
+          <li>
+            <!--<div class="col-md-6">-->
+              {{choice.choice}} Votes: {{choice.votes}}
+            <!--</div>-->
+            <!--<div class="col-md-6">-->
+              <button type="button" class="btn voteButton" ng-click="voteChoice(choice)">Vote</button>
+              <!--</div>-->
+          </li>
+        </ol>
+      </div>
+      <div class="col-md-3 form">
+        <form ng-submit="sendEmail()">
+          <fieldset class="form-group">
+            <input type="email" name="email" required class="form-control" ng-model="emailInput" ng-show="shareQuestionFlag" placeholder="Email of your friend :)"/>
+            <input type="submit" value="Share" class="btn shareButton" ng-mouseover="shareQuestionFlag = true" ng-disabled="isSubmitting"/>
+          </fieldset>
+        </form>
+        <div class="col-md-12">
+          <div class="alert alert-success" ng-show="showSuccessAlert">
+            <button type="button" class="close">×</button> <strong>Success!</strong> {{successTextAlert}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

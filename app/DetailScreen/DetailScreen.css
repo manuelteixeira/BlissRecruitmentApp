@@ -1,19 +1,23 @@
 
+.image {
+  max-width:100%;
+  max-height:100%;
+}
+
 
 .questionDetail {
   font-family: 'Open Sans', sans-serif;
-  margin: 20px;
+  font-size: 20px;
+  padding-top: 20px;
 }
 
-.questionDetail h3 {
-  font-size: 30px;
-}
+
 
 .voteButton, .shareButton {
-  border: none;
+  border:none;
   border-radius: 10px;
   background-color: #0CCAF1;
-  font-size: 25px;
+  font-size: 30px;
   font-family: 'Oswald', sans-serif;
   color: white;
   padding: 20px;
@@ -21,9 +25,14 @@
 
 .shareButton {
   background-color: #1646CC;
-  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .voteButton:hover, .shareButton:hover {
   background-color: black;
+}
+
+.form {
+  text-align: center;
+  margin: 30px;
 }

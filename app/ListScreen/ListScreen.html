@@ -2,11 +2,12 @@
 
 <header>List Questions</header>
 
-<input type="text" class="searchBox" placeholder="Search...">
+<div ng-controller="ListScreenCtrl as list" class="questionList" ng-init="getApiQuestions()">
+  <div ng-show="loading"><h1>LOADING...</h1></div>
 
-<div ng-controller="ListScreenCtrl as list" class="questionList">
-  <ol>
-    <li class="question" ng-repeat="question in list.questions">
+  <input ng-show="!loading" type="text" class="searchBox" placeholder="Search...">
+  <ol ng-show="!loading">
+    <li class="question" ng-repeat="question in questions">
       <a ng-href="/#!/DetailScreen/{{question.id}}">
         <figure>
           <img src={{question.thumb_url}}>
