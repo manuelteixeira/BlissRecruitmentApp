@@ -18,7 +18,7 @@
                 <img src={{question.thumb_url}}>
               </figure>
               <h2>{{question.question}}</h2>
-              <time>{{question.published_at}}</time>
+              <time>{{question.published_at | date:'dd/MM/yyyy @ h:mma'}}</time>
               <ol class="choices">
                 <li ng-repeat="choice in question.choices">{{choice.choice}} Votes: {{choice.votes}}</li>
               </ol>

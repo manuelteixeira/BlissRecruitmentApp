@@ -1,17 +1,28 @@
 
+
+.goBackBtn{
+  margin-top: 10px;
+  background-color: #00578E;
+  color: white;
+}
+
 .image {
   max-width:100%;
   max-height:100%;
+}
+
+#time {
+  margin: 0px;
 }
 
 
 .questionDetail {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
-  padding-top: 20px;
+  padding: 0px;
+  margin-top: 10px;
+  list-style-type: none;
 }
-
-
 
 .voteButton, .shareButton {
   border:none;

@@ -1,22 +1,25 @@
 
 
 <div class="container-fluid" ng-controller="DetailScreenCtrl" ng-init="getApiQuestion()">
-  <header>Questions Details</header
     <div class="row-fluid">
+      <div class="col-md-12">
+        <button class="btn goBackBtn" ng-click="goBackToList()">Back to list</button>
+        <header>Question Details</header>
+      </div>
       <div class="col-md-6">
         <img class="image" src="{{question.image_url}}">
       </div>
       <div class="col-md-6">
         <h3>{{question.question}}</h3>
-        <time>{{question.published_at}}</time>
+        <time id="time">{{question.published_at | date:'dd/MM/yyyy @ h:mma'}}</time>
         <ol ng-repeat="choice in question.choices" class="questionDetail">
           <li>
-            <!--<div class="col-md-6">-->
+            <div class="col-md-8">
               {{choice.choice}} Votes: {{choice.votes}}
-            <!--</div>-->
-            <!--<div class="col-md-6">-->
+            </div>
+            <div class="col-md-4">
               <button type="button" class="btn voteButton" ng-click="voteChoice(choice)">Vote</button>
-              <!--</div>-->
+            </div>
           </li>
         </ol>
       </div>

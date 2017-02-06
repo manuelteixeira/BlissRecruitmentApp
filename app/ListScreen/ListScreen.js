@@ -16,7 +16,7 @@ angular.module('myApp.ListScreen', ['ngRoute'])
   $scope.questions = [];
 
   $scope.getApiQuestions = function() {
-   $http.get("https://private-anon-0540f979da-blissrecruitmentapi.apiary-mock.com/questions?5&5")
+   $http.get("https://private-anon-0540f979da-blissrecruitmentapi.apiary-mock.com/questions?10&10")
    .then(function (response) { $scope.questions = response.data; });
 
    $scope.loading = false;

@@ -20,9 +20,7 @@ angular.module('myApp.LoadingScreen', ['ngRoute'])
   $scope.getApiHealth = function () {
     $http.get("https://private-bbbe9-blissrecruitmentapi.apiary-mock.com/health")
     .then(function (response){
-      //$location.path("/ListScreen");
-      $scope.retryAction = true;
-
+      $location.path("/ListScreen");
     })
     .catch(function (response){
       $scope.retryAction = true;

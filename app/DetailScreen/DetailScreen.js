@@ -8,7 +8,7 @@ angular.module('myApp.DetailScreen', ['ngRoute'])
     controller: 'DetailScreenCtrl'
   })
 
-  .when('blissrecruitment://questions?question_id=:id', {
+  .when('/blissrecruitment://questions?question_id=:id', {
     templateUrl: 'DetailScreen/DetailScreen.html',
     controller: 'DetailScreenCtrl'
   });
@@ -68,6 +68,10 @@ angular.module('myApp.DetailScreen', ['ngRoute'])
         $location.path("/ListScreen");
       }, 2000);
     });
+  }
+
+  $scope.goBackToList = function () {
+    $location.path("/ListScreen");
   }
 
 });
