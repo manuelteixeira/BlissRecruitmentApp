@@ -1,0 +1,9 @@
+
+
+<div class="container-fluid" ng-controller="LoadingScreenCtrl" ng-init="getApiHealth()">
+  <div class="row-fluid">
+    <div class="col-md-12 wrapper" ng-show="retryAction">
+      <button class="btn btn-info" ng-click="refreshPage()">Retry</button>
+    </div>
+  </div>
+</div>

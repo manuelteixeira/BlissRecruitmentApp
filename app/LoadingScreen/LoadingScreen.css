@@ -1,0 +1,11 @@
+
+button {
+  position: absolute;
+  top: 50%;
+  height: 100px;
+  width: 150px;
+}
+
+.wrapper {
+  text-align: center;
+}
